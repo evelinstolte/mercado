@@ -87,7 +87,7 @@ man.dispose();//fechar a tela da manutenção
         modelo.addColumn("Nome");
         modelo.addColumn("Razão");
         modelo.addColumn("Fundação");
-        modelo.addColumn("Funcionários");
+        modelo.addColumn("Funcionário");
         modelo.addColumn("Valor");
         
         List<Mercado> resultados = DaoMercado.consultar();
@@ -98,7 +98,7 @@ man.dispose();//fechar a tela da manutenção
             linha.add(objeto.getCodigo());
             linha.add(objeto.getNome());
             linha.add(objeto.getRazao());
-            linha.add(objeto.getFundacao());
+            linha.add(objeto.getFundacao().format(DateTimeFormatter.ofPattern("dd/MM/yyyy")));
             linha.add(objeto.getFuncionarios());
             linha.add(objeto.getValor());
             modelo.addRow(linha); //adicionando a linha na tabela

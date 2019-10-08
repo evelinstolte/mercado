@@ -22,7 +22,7 @@ import modelo.Mercado;
 public class DaoMercado {
     
      public static boolean inserir(Mercado objeto) {
-        String sql = "INSERT INTO mercado ( nome, razao, fundacao, funcionario, valor) VALUES (?,?,?,?,?,?)";
+        String sql = "INSERT INTO mercado ( nome, razao, fundacao, funcionario, valor) VALUES (?,?,?,?,?)";
         try {
             PreparedStatement ps = conexao.Conexao.getConexao().prepareStatement(sql);
             
@@ -57,7 +57,7 @@ public class DaoMercado {
     }
       
         public static boolean alterar(Mercado objeto) {
-        String sql = "UPDATE mercado SET nome = ?, razao = ?,fundacao = ?,funcionarios = ?,valor = ?  WHERE codigo=?";
+        String sql = "UPDATE mercado SET nome = ?, razao = ?,fundacao = ?,funcionario = ?,valor = ?  WHERE codigo=?";
         try {
             PreparedStatement ps = conexao.Conexao.getConexao().prepareStatement(sql);
             
